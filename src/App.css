@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,28 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* Color palette */
+/* #3d5a80 - teal 
+#98c1d9 - powdery blue 
+#e0fbfc - baby blue 
+#ee6c4d - coral-ish
+#293241 - grey */
+
+h1 {
+  font-size: 50px;
+  padding: 30px;
+  color: #e0fbfc;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background-color: #3d5a80;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  background-color: #98c1d9;
 }
