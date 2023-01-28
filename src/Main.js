@@ -1,8 +1,6 @@
 import React from "react";
 import Map from "./Map"
 import { Button, Container, Form } from "react-bootstrap";
-// // import async from "q";
-// import async from "async";
 import axios from "axios";
 import "./App.css"
 
