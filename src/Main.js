@@ -1,6 +1,4 @@
 import React from "react";
-import Restaurants from "./Restaurants";
-import Weather from "./Weather";
 import Map from "./Map"
 import { Button, Container, Form } from "react-bootstrap";
 import { async } from "q";
@@ -16,9 +14,6 @@ class Main extends React.Component {
             displayInfo: false,
             city: '',
             cityData: {},
-            restaurantData: [],
-            locationDara: [],
-            weatherData: []
         }
     }
     handleSearchInput = (e) => {
@@ -46,12 +41,12 @@ class Main extends React.Component {
         return (
             <>
                 <Container>
-                    <Form>
+                    <Form class='mainForm'>
                         <Form.Group>
                             <Form.Label>City</Form.Label>
                             <Form.Control type="text" onInput={this.handleSearchInput} />
                         </Form.Group>
-                        <Button onClick={this.displaySearch}>Explore!</Button>
+                        <Button onClick={this.displaySearch} className="mainButton">Explore!</Button>
                     </Form>
                 </Container>
 
@@ -60,6 +55,7 @@ class Main extends React.Component {
                         <h2>{this.state.cityData.display_name}</h2>
                         <p>Lat: {this.state.cityData.lat}</p> 
                         <p>Lon: {this.state.cityData.lon}</p>
+                        <Map lat={this.state.cityData.lat} lon={this.state.cityData.lon} />
                     </>
                 }
             </>
